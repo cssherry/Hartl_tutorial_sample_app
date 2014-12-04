@@ -6,7 +6,7 @@
     <a href="https://zhoux10-rails-tutorial-sample.herokuapp.com/static_pages/about">About</a> |
     <a href="https://zhoux10-rails-tutorial-sample.herokuapp.com/static_pages/help">Help</a>
   </p>
-  <title><%= yield(:title) %> | Ruby on Rails Tutorial Sample App</title>
+  <title><%= full_title(yield(:title)) %></title>
   <%= stylesheet_link_tag    'application', media: 'all',
   'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
