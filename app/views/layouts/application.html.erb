@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <p>
-    <a href="https://zhoux10-rails-tutorial-sample.herokuapp.com/">Home</a> |
-    <a href="https://zhoux10-rails-tutorial-sample.herokuapp.com/static_pages/about">About</a> |
-    <a href="https://zhoux10-rails-tutorial-sample.herokuapp.com/static_pages/help">Help</a>
-  </p>
   <title><%= full_title(yield(:title)) %></title>
-  <%= stylesheet_link_tag    'application', media: 'all',
+  <%= stylesheet_link_tag 'application', media: 'all',
   'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <%= render 'layouts/shim' %>
 </head>
 <body>
-  <%= yield %>
-
+  <%= render 'layouts/header' %>
+  <div class="container">
+    <%= yield %>
+    <%= render 'layouts/footer' %>
+  </div>
 </body>
 </html>
